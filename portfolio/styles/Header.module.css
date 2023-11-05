@@ -1,0 +1,38 @@
+@font-face {
+  font-family: 'Ramaraja';
+  src: url('../public/fonts/Ramaraja-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between; /* This will separate the name and the nav links */
+  align-items: center; /* Align items vertically */
+  padding: 1rem 2rem;
+  background-color: #fff;
+}
+
+.brand {
+  font-family: 'Ramaraja', serif;
+  font-size: 1.5rem; /* Larger font size for your name */
+  font-weight: bold;
+}
+
+.nav {
+  display: flex;
+  justify-content: center; /* Center the navigation links */
+  align-items: center;
+  gap: 2rem; 
+  font-family: 'Ramaraja', serif;
+}
+
+.nav a:link, .nav a:visited {
+  color: #000; 
+  text-decoration: none; 
+}
+
+.nav a:hover {
+  color: #555; /* Dark grey for hover state */
+  text-decoration: underline; /* Underline on hover */
+}

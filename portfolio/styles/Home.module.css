@@ -1,0 +1,11 @@
+.hero {
+  text-align: center; /* Center the text inside the hero section */
+  padding: 4rem 0; /* Add top and bottom padding */
+  margin-bottom: 2rem; /* Space between hero and content */
+}
+
+.content {
+  padding: 2rem 0; /* Padding inside the content blocks */
+}
+
+/* Add additional styling based on the sections visible in the Figma prototype */

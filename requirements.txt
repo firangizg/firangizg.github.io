@@ -1,2 +1,1 @@
-npm install -g gatsby-cli
-
+using next.js
