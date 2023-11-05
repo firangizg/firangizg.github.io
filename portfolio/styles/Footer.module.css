@@ -2,6 +2,7 @@
     background-color: #fff; /* Use the color from Figma design */
     padding: 1rem;
     text-align: center;
-    /* Add more styles */
+    width: 100%;
+    margin: auto 0;
   }
   

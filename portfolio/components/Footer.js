@@ -1,4 +1,4 @@
-import styles from '../styles/Header.module.css'; // If using CSS Modules
+import styles from '../styles/Footer.module.css'; // If using CSS Modules
 
 const Footer = () => {
   return (

@@ -7,25 +7,34 @@
 
 .header {
   display: flex;
-  justify-content: space-between; /* This will separate the name and the nav links */
-  align-items: center; /* Align items vertically */
+  justify-content: space-between;
+  align-items: center; 
   padding: 1rem 2rem;
   background-color: #fff;
+  border-bottom: 1px solid black;
 }
 
 .brand {
   font-family: 'Ramaraja', serif;
-  font-size: 1.5rem; /* Larger font size for your name */
+  font-size: 1.5rem; 
   font-weight: bold;
 }
 
 .nav {
   display: flex;
-  justify-content: center; /* Center the navigation links */
+  justify-content: center; 
   align-items: center;
   gap: 2rem; 
   font-family: 'Ramaraja', serif;
 }
+
+/* .nav.visible {
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  gap: 2rem; 
+  font-family: 'Ramaraja', serif;
+} */
 
 .nav a:link, .nav a:visited {
   color: #000; 
@@ -35,4 +44,44 @@
 .nav a:hover {
   color: #555; /* Dark grey for hover state */
   text-decoration: underline; /* Underline on hover */
+}
+
+.hamburgerMenu {
+  display: none; 
+}
+
+@media (max-width: 600px) {
+  .header {
+    flex-wrap: wrap; /* Allow the items to wrap */
+  }
+
+  .brand {
+    font-size: 1.2rem; /* Smaller font size for the name */
+    white-space: nowrap; /* Prevent the name from breaking into multiple lines */
+    overflow: hidden; /* Hide overflow */
+    text-overflow: ellipsis; /* Add an ellipsis if the name is too long */
+    max-width: 120px; /* Maximum width for the name */
+  }
+
+  .nav {
+    display: none; 
+  }
+
+  .nav.visible {
+    display: none;
+  }
+
+  .hamburgerMenu {
+    display: block; 
+    justify-content: right; 
+    align-items: center;
+    gap: 2rem; 
+    font-family: 'Ramaraja', serif;
+  }
+  
+  /* Ensure the bottom border spans the full width */
+  .header {
+    border-bottom: 1px solid black;
+    width: 100%;
+  }
 }

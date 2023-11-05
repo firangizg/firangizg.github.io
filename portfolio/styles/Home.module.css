@@ -1,11 +1,62 @@
-.hero {
-  text-align: center; /* Center the text inside the hero section */
-  padding: 4rem 0; /* Add top and bottom padding */
-  margin-bottom: 2rem; /* Space between hero and content */
+@font-face {
+  font-family: 'IBMPlexMono-Light';
+  src: url('../public/fonts/IBMPlexMono-Light.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
 
-.content {
-  padding: 2rem 0; /* Padding inside the content blocks */
+.contentWrapper {
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  padding: 10px;
+  font-family: 'IBMPlexMono-Light';
 }
 
-/* Add additional styling based on the sections visible in the Figma prototype */
+.textContent {
+  flex: 0 0 30%; 
+  padding-right: 15px; 
+}
+
+.imageContent {
+  flex: 0 0 50%; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Style for the 'more about me' and links section */
+.textContent p, .textContent .links a {
+  margin-bottom: 10px; 
+  color: black; 
+}
+
+.textContent .links a {
+  display: block;
+  color: black;
+}
+
+.textContent .links a:hover {
+  color: gray; 
+  text-decoration: underline; 
+}
+
+.insideLink a{
+  color: black; 
+  text-decoration: underline; 
+}
+.insideLink a:hover{
+  color: gray; 
+}
+
+@media (max-width: 600px) {
+  .contentWrapper {
+    flex-direction: column;
+  }
+
+  .textContent, .imageContent {
+    padding-right: 0;
+    width: 100%;
+    flex-basis: auto; 
+  }
+}
