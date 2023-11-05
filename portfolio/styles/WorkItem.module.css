@@ -1,0 +1,29 @@
+/* WorkItem.module.css */
+.workCardContainer {
+  position: relative;
+  padding-left: 30px; /* Adjust as needed for the offset */
+}
+
+.workCardContainer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 90%; /* Same width as the card for full overlay */
+  height: 100%; /* Same height as the card for full overlay */
+  background-color: var(--offset-color, purple); /* Fallback color if no prop is provided */
+  z-index: -1;
+  transform: translateX(-20px); /* Adjust for the desired offset */
+  transform: translateY(-20px); /* Adjust for the desired offset */
+}
+
+.workCard {
+  border: 1px solid black;
+  background-color: white;
+  transition: 0.3s;
+  padding: 16px;
+  margin-top: 5rem; /* To ensure there's space for the shadow */
+  position: relative;
+  z-index: 1; /* Ensures the card is above the pseudo-element */
+}
+
