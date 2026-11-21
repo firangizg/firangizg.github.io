@@ -33,9 +33,6 @@ const Header = () => {
 
       <nav className={isNavVisible ? `${styles.nav} ${styles.visible}` : styles.nav}>
         <Link href="/">Home</Link>
-        <Link href="/about">About</Link>
-        <Link href="/work">Work</Link>
-        <Link href="/photography">Photography</Link>
         <Link href="/blog">Blog</Link>
       </nav>
     </header>
