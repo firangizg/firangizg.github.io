@@ -3,6 +3,9 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches: [main]
+  # Rebuild daily so new Substack posts appear on the Blog page automatically.
+  schedule:
+    - cron: '17 6 * * *'
   workflow_dispatch:
 
 permissions:
