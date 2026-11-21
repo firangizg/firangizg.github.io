@@ -1,13 +1,19 @@
 import React from 'react';
 import Layout from '../components/Layout';
-import Blog from '../components/BlogPost';
+import styles from '../styles/Home.module.css';
 
-export default function Photography() {
+const SUBSTACK_URL = 'https://substack.com/@firangizg';
+
+export default function Blog() {
   return (
     <Layout>
-      <h1>BlogPost</h1>
-      {/* PhotoGallery handles fetching and displaying images */}
-      <Blog />
+      <div className={styles.notice}>
+        <h1>Blog</h1>
+        <p>
+          i write on substack — find me at{' '}
+          <a href={SUBSTACK_URL} target="_blank" rel="noopener noreferrer">substack.com/@firangizg</a>
+        </p>
+      </div>
     </Layout>
   );
 }
