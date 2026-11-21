@@ -1,0 +1,30 @@
+name: Feature / content request
+description: Something new to add or change on the site
+labels: [enhancement]
+body:
+  - type: dropdown
+    id: page
+    attributes:
+      label: Which part of the site?
+      options:
+        - Home
+        - Blog
+        - About
+        - Work
+        - Photography
+        - Whole site / menu / design
+        - Something new
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What do you want?
+      description: Describe the change. Paste links, text to use, or attach photos (drag them in or tap to upload).
+    validations:
+      required: true
+  - type: textarea
+    id: notes
+    attributes:
+      label: Anything else?
+      description: Inspiration links, deadlines, etc. (optional)

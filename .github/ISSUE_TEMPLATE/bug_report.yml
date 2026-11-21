@@ -1,0 +1,26 @@
+name: Something's broken
+description: A page looks wrong, a link doesn't work, etc.
+labels: [bug]
+body:
+  - type: input
+    id: where
+    attributes:
+      label: Which page / link?
+      placeholder: https://firaganbarli.com/blog/
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What's wrong?
+      description: What you expected vs. what you saw. Screenshots help (attach them here).
+    validations:
+      required: true
+  - type: dropdown
+    id: device
+    attributes:
+      label: Device
+      options:
+        - Phone
+        - Computer
+        - Both
