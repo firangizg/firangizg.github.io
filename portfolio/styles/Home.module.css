@@ -60,3 +60,19 @@
     flex-basis: auto; 
   }
 }
+
+/* Simple centered message used on Home and Blog while the site is being updated */
+.notice {
+  max-width: 560px;
+  font-family: 'IBMPlexMono-Light';
+  line-height: 1.6;
+}
+
+.notice a {
+  color: black;
+  text-decoration: underline;
+}
+
+.notice a:hover {
+  color: gray;
+}

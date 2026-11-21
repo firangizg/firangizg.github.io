@@ -1,21 +1,19 @@
 import React from 'react';
 import Layout from '../components/Layout';
-import SubstackPosts from '../components/SubstackPosts';
-import { getSubstackPosts } from '../lib/substack';
-import siteConfig from '../site.config';
+import styles from '../styles/Home.module.css';
 
-export default function Blog({ posts, substackUrl }) {
+const SUBSTACK_URL = 'https://substack.com/@firangizg';
+
+export default function Blog() {
   return (
     <Layout>
-      <h1>Blog</h1>
-      <SubstackPosts posts={posts} substackUrl={substackUrl} />
+      <div className={styles.notice}>
+        <h1>Blog</h1>
+        <p>
+          i write on substack — find me at{' '}
+          <a href={SUBSTACK_URL} target="_blank" rel="noopener noreferrer">substack.com/@firangizg</a>
+        </p>
+      </div>
     </Layout>
   );
-}
-
-// Runs at build time. The deploy workflow rebuilds daily, so new posts appear automatically.
-export async function getStaticProps() {
-  const { substackUrl, blogPostCount } = siteConfig;
-  const posts = await getSubstackPosts(substackUrl, blogPostCount);
-  return { props: { posts, substackUrl } };
 }
